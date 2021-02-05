@@ -1,1 +1,25 @@
-import pandas as pd 
+import csv
+import pandas as pd
+import csv
+import numpy as np
+import re
+import matplotlib.pyplot as plt
+FinData = pd.read_csv (r'Financial Data on Companies - Financial Listings.csv')   #read the csv file (put 'r' before the path string to address any special characters in the path, such as '\'). Don't forget to put the file name at the end of the path + ".csv"
+print(FinData)
+#Dataframe on Credit Rating and Current Ratio
+df = pd.DataFrame(FinData, columns= ['Water District','Credit Rating Convert','Current Ratio'])
+df.describe(include='all')
+df.cov()
+
+#Dataframe on credit rating and Median income
+df1=pd.DataFrame(FinData,columns=['Water District','Credit Rating Convert','Median Income'])
+df1['Median Income']=df1['Median Income'].str.replace(",", "").astype("float")
+df1.describe()
+df1.cov()
+df1.plot()
+
+#Dataframe on credit rating and Average Household Value
+df2=pd.DataFrame(FinData,columns=['Water District','Credit Rating Convert','Average Household Value'])
+df2['Average Household Value']=df2['Average Household Value'].str.replace(",", "").astype("float")
+df2.describe()
+df2.cov()
