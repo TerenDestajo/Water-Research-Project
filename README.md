@@ -1,4 +1,1 @@
-# Water-Research-Project
-#Short descriptive statistics on Water Rates &amp; Financial API
-#Full report on my linkedin
-#Codes for the graphs
+[WaterAgencies[112].pdf](https://github.com/TerenDestajo/Water-Research-Project/files/13759828/WaterAgencies.112.pdf)
